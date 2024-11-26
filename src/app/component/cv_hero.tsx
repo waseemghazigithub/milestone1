@@ -8,7 +8,7 @@ import { GoDotFill } from "react-icons/go";
     <div className="flex bg-yellow-100">
       <img
        // src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-         src="/waseemfacebook.jpg"
+         src="/Waseemfacebook.jpg"
         className="w-36 h-40  drop-shadow-2xl  relative z-0 rounded-full transition-all duration-300 hover:scale-90"
       />
       <div className= "bg-yellow-100  h-[180px] w-[862px]">
