@@ -25,10 +25,10 @@ export default function Home() {
  <div className="flex justify-around items-center bg-green-400 h-12">
   <h1>logo</h1>
   <ul className="gap-3  hidden sm:flex items-center">
-    <Link className="hover:bg-green-200 hover:rounded-e-full w-auto p-3" href="/CompGrid">Grids</Link>
-    <Link className="hover:bg-green-200 hover:rounded-md w-auto p-3 " href="/AutoGrid">Auto Grids</Link>
+    <Link className="hover:bg-green-200 hover:rounded-e-full w-auto p-3 " href="/Grid_Prectic">Mile Stone-1</Link>
+    <Link className="hover:bg-green-200 hover:rounded-e-full w-auto p-3" href="/InputR">Dynamic Resume M2</Link>
+    <Link className="hover:bg-green-200 hover:rounded-e-full w-auto p-3 " href="/AutoGrid">Auto Grids</Link>
     <Link className="hover:bg-green-200 hover:rounded-e-full w-auto p-3 " href="/Flex">Flex</Link>
-    <Link className="hover:bg-green-200 hover:rounded-e-full w-auto p-3 " href="/Grid_Prectic">Grids Practice</Link>
     </ul>
   <button className="bg-yellow-100 p-3 rounded">Join</button>
 </div> 

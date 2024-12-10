@@ -1,6 +1,11 @@
+
+"use client"
 import Cv_hero from "../component/cv_hero";
+import { useState } from "react";
+
 
 const Gp=()=>{
+   const [isHidden, setIsHidden] = useState(false);
     let ed="Bachelor of commerce (1992) , Diploma of Computer science(1998) , M.C.P. (2001)"  
     let sk="Software Devlopment Desktop (C#, Vb.Not) Frontend (UI NextJs Tailwaind) "
     let sk1="Data base Mangment FoxPro, MsAccess, SQL-Server/Oracal/PostgreSQL (DDL/DML written views, store procedure, functions, trigers)" 
@@ -43,13 +48,16 @@ const Gp=()=>{
    <progress className="progress progress-success w-full " value={pbedu} max="100"></progress>
     </div> 
 
-
- <div className="bg-yellow-400 rounded-lg text-xl font-bold p-2 transition-all duration-300 hover:scale-90  sm:col-span-2 md:col-span-1">
-    Skills: </div>
- <div className="bg-yellow-500 p-2 col-span-3 sm:col-span-2 md:col-span-1 ">
+    {/* <section id="skhidden" className={isHidden ? "hidden" : ""}> */}
+        <div className= {isHidden ? "hidden" : "bg-yellow-400 rounded-lg text-xl font-bold p-2 transition-all duration-300 hover:scale-90 sm:col-span-2 md:col-span-1"}>
+          Skills:
+        </div>
+      {/* </section> */}
+ <div className={isHidden ? "hidden" :"bg-yellow-500 p-2 col-span-3 sm:col-span-2 md:col-span-1 "}>
     {sk}
  </div>
-  <div className="bg-yellow-600 p-2  col-span-3 sm:col-span-2 md:col-span-1">
+
+  <div className={isHidden ? "hidden" :"bg-yellow-600 p-2  col-span-3 sm:col-span-2 md:col-span-1"}>
  <progress className="progress progress-success w-full " value={psk} max="100"></progress>
  </div>
 
@@ -94,6 +102,7 @@ const Gp=()=>{
  <div className="bg-yellow-600 p-2  col-span-3 sm:col-span-2 md:col-span-1">
  <progress className="progress progress-success w-full " value={psk_4} max="100"></progress>
  </div>
+ 
 {/* experience */}
  <div className="bg-yellow-400 rounded-lg text-xl font-bold p-2 transition-all duration-300 hover:scale-90  sm:col-span-2 md:col-span-1">
  Experience </div>
@@ -115,8 +124,46 @@ const Gp=()=>{
  <progress className="progress progress-success w-full " value={psk_4} max="100"></progress>
  </div>
 
+{/* experience-3 */}
+<div className="bg-yellow-400 rounded-lg  font-bold p-2 text-center  col-span-3 sm:col-span-2 md:col-span-1">
+    {Eyear3} </div>
+ <div className="bg-yellow-500 p-2 col-span-3 sm:col-span-2 md:col-span-1 ">
+    {exp3}
+ </div>
+ 
+ <div className="bg-yellow-600 p-2  col-span-3 sm:col-span-2 md:col-span-1">
+ <progress className="progress progress-success w-full " value={psk_3} max="100"></progress>
+ </div>
+
+ {/* experience-2 */}
+<div className="bg-yellow-400 rounded-lg  font-bold p-2 text-center  col-span-3 sm:col-span-2 md:col-span-1">
+    {Eyear2} </div>
+ <div className="bg-yellow-500 p-2 col-span-3 sm:col-span-2 md:col-span-1 ">
+    {exp2}
+ </div>
+ 
+ <div className="bg-yellow-600 p-2  col-span-3 sm:col-span-2 md:col-span-1">
+ <progress className="progress progress-success w-full " value={psk_2} max="100"></progress>
+ </div>
+ {/* experience-1 */}
+ <div className="bg-yellow-400 rounded-lg  font-bold p-2 text-center  col-span-3 sm:col-span-2 md:col-span-1">
+    {Eyear1} </div>
+ <div className="bg-yellow-500 p-2 col-span-3 sm:col-span-2 md:col-span-1 ">
+    {exp2}
+ </div>
+ 
+ <div className="bg-yellow-600 p-2  col-span-3 sm:col-span-2 md:col-span-1">
+ <progress className="progress progress-success w-full " value={psk_1} max="100"></progress>
+ </div>
 
 </div>
+<button
+        onClick={() => setIsHidden(!isHidden)}
+        className="bg-yellow-950 text-white px-9 py-2 rounded-lg ml-10 mt-0"
+      >
+        {isHidden ? "Show Skills Section" : "Hide Skills Section"}
+      </button>
+
 </div>
     )
 }
